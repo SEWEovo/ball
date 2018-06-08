@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="62dp"
+        android:layout_height="72dp"
+        android:layout_x="0dp"
+        android:layout_y="2dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="76dp"
+        android:layout_height="31dp"
+        android:layout_x="65dp"
+        android:layout_y="5dp"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:layout_x="65dp"
+        android:layout_y="42dp"
+        android:paddingLeft="10dp" />
+
+
+</AbsoluteLayout>

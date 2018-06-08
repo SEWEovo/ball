@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <!--存放图片的ViewPager-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#66000000"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <!--标题-->
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="标题"
+                android:textColor="@android:color/white" />
+            <!--存放小圆点的容器-->
+            <LinearLayout
+                android:id="@+id/ll_point_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="219dp"
+        android:singleLine="true"
+        android:text="销量最高" />
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="162dp"
+        android:layout_y="218dp"
+        android:singleLine="true"
+        android:text="最受欢迎" />
+
+    <TextView
+        android:id="@+id/newest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="304dp"
+        android:layout_y="218dp"
+        android:singleLine="true"
+        android:text="最新上架" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="107dp"
+        android:layout_height="262dp"
+        android:layout_x="14dp"
+        android:layout_y="247dp"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="99dp">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="113dp"
+        android:layout_height="258dp"
+        android:layout_x="144dp"
+        android:layout_y="249dp"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="246dp">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_width="112dp"
+        android:layout_height="264dp"
+        android:layout_x="283dp"
+        android:layout_y="245dp"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="242dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_x="1dp"
+        android:layout_y="544dp">
+
+        <Button
+            android:id="@+id/index"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="首页"
+
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/look"
+            android:text="浏览更多"
+
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/car"
+            android:text="购物车"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/me"
+            android:text="个人中心"
+            />
+
+    </LinearLayout>
+</AbsoluteLayout>

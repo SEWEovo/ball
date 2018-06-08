@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="154dp"
+        android:layout_height="159dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="215dp"
+        android:layout_height="38dp"
+        android:layout_x="165dp"
+        android:layout_y="1dp" />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="215dp"
+        android:layout_height="62dp"
+        android:layout_x="165dp"
+        android:layout_y="41dp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="77dp"
+        android:layout_height="52dp"
+        android:layout_x="164dp"
+        android:layout_y="106dp" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_x="261dp"
+        android:layout_y="106dp" />
+
+</AbsoluteLayout>

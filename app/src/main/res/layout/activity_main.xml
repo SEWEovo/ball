@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl"
+    tools:context="com.example.administrator.ball.MainActivity">
+<TextView
+android:text="登录界面"
+android:textSize="30dp"
+android:textColor="#003399"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/textView1"
+android:gravity="center_horizontal"
+android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_margin="10dp"
+        android:layout_x="11dp"
+        android:layout_y="75dp"
+        android:text="用户名"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="79dp" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_x="96dp"
+        android:layout_y="77dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#003399"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_margin="10dp"
+        android:layout_x="11dp"
+        android:layout_y="137dp"
+        android:text="密码"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_x="94dp"
+        android:layout_y="138dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#003399"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_x="78dp"
+        android:layout_y="210dp"
+        android:background="#0099FF"
+        android:text="登录"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <Button
+        android:id="@+id/bt_regist"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_x="78dp"
+        android:layout_y="280dp"
+        android:background="#0099FF"
+        android:text="注册"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+</AbsoluteLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+
+        android:layout_x="18dp"
+        android:layout_y="39dp" />
+
+    <EditText
+        android:id="@+id/con"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_x="22dp"
+        android:layout_y="99dp" />
+</LinearLayout>
