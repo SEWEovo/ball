@@ -22,7 +22,6 @@ import java.util.Map;
 /**
  * Created by Administrator on 2018/6/6.
  */
-
 public class AllBookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +29,8 @@ public class AllBookActivity extends AppCompatActivity {
         int[] images={R.drawable.a,R.drawable.b,R.drawable.c};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allbook);
-
         Intent intent=getIntent();
         final String json=(String )intent.getStringExtra("json");
-
-
         ArrayList<HashMap<String, Object>> list2 = new ArrayList<HashMap<String, Object>>();
             try {
                 JSONArray jsonArray = null;
@@ -63,8 +59,6 @@ public class AllBookActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 final String id=String.valueOf(i+1);
-
-
                 final Handler myHandler = new Handler(){
                     public void handleMessage(Message msg){
                         String responseResult = (String)msg.obj;
@@ -75,7 +69,6 @@ public class AllBookActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 };
-
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -85,13 +78,11 @@ public class AllBookActivity extends AppCompatActivity {
                             Message msg = new Message();
                             msg.obj = result;
                             myHandler.sendMessage(msg);
-
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }
                 }).start();
-
             }
         });
     }

@@ -101,38 +101,38 @@
 
     </ListView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:layout_x="1dp"
-        android:layout_y="544dp">
+
 
         <Button
             android:id="@+id/index"
             android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:text="首页"
+            android:layout_height="50dp"
+            android:layout_y="555dp"
+            android:text="首页" />
 
-            />
         <Button
+            android:id="@+id/tip"
             android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:id="@+id/look"
-            android:text="浏览更多"
+            android:layout_height="50dp"
+            android:layout_x="206dp"
+            android:layout_y="554dp"
+            android:text="订单" />
 
-            />
         <Button
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:id="@+id/car"
-            android:text="购物车"
-            />
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
             android:id="@+id/me"
-            android:text="个人中心"
-            />
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_x="311dp"
+            android:layout_y="552dp"
+            android:text="个人中心" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/car"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_x="102dp"
+            android:layout_y="555dp"
+            android:text="购物车"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="543dp" />
 </AbsoluteLayout>

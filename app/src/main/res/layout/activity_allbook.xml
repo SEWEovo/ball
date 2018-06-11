@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="wrap_content"
@@ -15,15 +11,12 @@
         android:layout_y="58dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="395dp"></ListView>
-
     <Button
         android:id="@+id/index"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_y="555dp"
-
         android:text="首页" />
-
     <Button
         android:id="@+id/tip"
         android:layout_width="100dp"
@@ -31,7 +24,6 @@
         android:layout_x="206dp"
         android:layout_y="554dp"
         android:text="订单" />
-
     <Button
         android:id="@+id/me"
         android:layout_width="100dp"
@@ -39,16 +31,13 @@
         android:layout_x="311dp"
         android:layout_y="552dp"
         android:text="个人中心" />
-
     <Button
         android:id="@+id/car"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_x="102dp"
-
         android:layout_y="555dp"
         android:text="购物车"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="543dp" />
-
 </AbsoluteLayout>
