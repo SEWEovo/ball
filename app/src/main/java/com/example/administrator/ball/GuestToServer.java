@@ -25,7 +25,7 @@ import java.util.List;
 
 public class GuestToServer {
     //由于Tomcat服务器部署在本地，url为本地Tomcat服务的url，IP地址为本地主机IP地址
-    private   String url="http://192.168.1.103:8080/Test/LoginServlet";
+    private   String url="http://169.254.106.60:8080/Test/LoginServlet";
     //服务器返回的结果
     String result = "";
 

@@ -101,10 +101,10 @@
                         android:textSize="18sp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/tv_total_price"
+                        android:id="@+id/total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥0.00"
+
                         android:textColor="#000fff"
                         android:textSize="16sp"
                         android:textStyle="bold" />

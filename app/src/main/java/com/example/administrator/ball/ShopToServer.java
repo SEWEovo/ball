@@ -19,12 +19,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/6/6.
+ * Created by Administrator on 2018/6/24.
  */
 
-public class AllBookToServer {
+public class ShopToServer {
     //由于Tomcat服务器部署在本地，url为本地Tomcat服务的url，IP地址为本地主机IP地址
-    private String url="http://169.254.106.60:8080/Test/AllBookServlet";
+    private  String url="http://169.254.106.60:8080/Test/ShopServlet";
     //服务器返回的结果
     String result = "";
 
@@ -32,9 +32,19 @@ public class AllBookToServer {
      * 使用Post方式向服务器发送请求并返回响应
      * @return
      */
-    public String doPost() throws IOException {
+    public String doPost(String username,String bookname,String price1) throws IOException {
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost(url);
+        NameValuePair param1 = new BasicNameValuePair("username", username);
+        NameValuePair param2 = new BasicNameValuePair("bookname", bookname);
+        NameValuePair param3 = new BasicNameValuePair("price1", price1);
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(param1);
+        params.add(param2);
+        //将参数包装如HttpEntity中并放入HttpPost的请求体中
+        HttpEntity httpEntity = new UrlEncodedFormEntity(params, "UTF-8");
+
+        httpPost.setEntity(httpEntity);
         HttpResponse httpResponse = httpClient.execute(httpPost);
         //如果响应成功
         if(httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
@@ -56,5 +66,7 @@ public class AllBookToServer {
             return "Error";
         }
     }
-
 }
+
+
+

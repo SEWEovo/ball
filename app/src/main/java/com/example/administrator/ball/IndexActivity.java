@@ -48,6 +48,7 @@ public class IndexActivity extends Activity implements ViewPager.OnPageChangeLis
         int[] images={R.drawable.a,R.drawable.b,R.drawable.c};
         Intent intent=getIntent();
         final String username=intent.getStringExtra("username");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
         Button btn=(Button)findViewById(R.id.look);
@@ -59,9 +60,9 @@ public class IndexActivity extends Activity implements ViewPager.OnPageChangeLis
                     public void handleMessage(Message msg){
                         String responseResult = (String)msg.obj;
                        // 获取请求的json数据，并解析
-                        Toast.makeText(IndexActivity.this, responseResult, Toast.LENGTH_LONG).show();
                         Bundle data=new Bundle();
                         data.putString("json",responseResult);
+                        data.putString("username",username);
                         Intent intent=new Intent(IndexActivity.this,ShopCarActivity.class);
                         intent.putExtras(data);
                         startActivity(intent);
@@ -120,6 +121,7 @@ public class IndexActivity extends Activity implements ViewPager.OnPageChangeLis
                        //获取请求的json数据，并解析
                            Bundle data=new Bundle();
                            data.putString("json",responseResult);
+                           data.putString("username",username);
                            Intent intent=new Intent(IndexActivity.this,AllBookActivity.class);
                            intent.putExtras(data);
                            startActivity(intent);

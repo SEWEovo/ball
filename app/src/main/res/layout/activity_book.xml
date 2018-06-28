@@ -34,12 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_x="212dp"
         android:layout_y="552dp"
-        android:text="加入购物车" />
+        android:text="查看购物车" />
     <Button
         android:id="@+id/buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="316dp"
         android:layout_y="552dp"
-        android:text="立即购买" />
+        android:text="加入购物车" />
 </AbsoluteLayout>

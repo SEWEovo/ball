@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
@@ -17,14 +19,15 @@ public class ShopCarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ListView listView;
-        String[] desc={"1233","2334","21321"};
-        String[] name={"一号","二号","三号"};
-        String[] price={"12.3","13.4","12.5"};
+//        String[] desc={"1233","2334","21321"};
+//        String[] name={"一号","二号","三号"};
+//        String[] price={"12.3","13.4","12.5"};
         int[] images={R.drawable.a,R.drawable.b,R.drawable.c};
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopcar);
+        TextView total=(TextView)findViewById(R.id.total);
 //        Button add =(Button) findViewById(R.id.add);
 //        Button buy=(Button) findViewById(R.id.buy);
 //
@@ -53,6 +56,7 @@ public class ShopCarActivity extends AppCompatActivity {
                 new int[]{R.id.name,R.id.pic,R.id.desc,R.id.price,R.id.sum});
         ListView list=(ListView)findViewById(R.id.listview);
         list.setAdapter(simpleAdapter);
+
 
 //        add.setOnClickListener(new View.OnClickListener() {
 //            @Override

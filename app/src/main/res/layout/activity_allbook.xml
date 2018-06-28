@@ -17,25 +17,21 @@
         android:layout_height="50dp"
         android:layout_y="555dp"
         android:text="首页" />
+
     <Button
-        android:id="@+id/tip"
+        android:id="@+id/look"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_x="206dp"
-        android:layout_y="554dp"
-        android:text="订单" />
-    <Button
-        android:id="@+id/me"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_x="311dp"
-        android:layout_y="552dp"
-        android:text="个人中心" />
+        android:layout_x="312dp"
+        android:layout_y="555dp"
+        android:text="书籍" />
+
+
     <Button
         android:id="@+id/car"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_x="102dp"
+        android:layout_x="164dp"
         android:layout_y="555dp"
         android:text="购物车"
         tools:layout_editor_absoluteX="85dp"

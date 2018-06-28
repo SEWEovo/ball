@@ -6,6 +6,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -28,8 +29,10 @@ public class AllBookActivity extends AppCompatActivity {
         ListView listView;
         int[] images={R.drawable.a,R.drawable.b,R.drawable.c};
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_allbook);
         Intent intent=getIntent();
+        final String username=intent.getStringExtra("username");
         final String json=(String )intent.getStringExtra("json");
         ArrayList<HashMap<String, Object>> list2 = new ArrayList<HashMap<String, Object>>();
             try {
@@ -49,7 +52,41 @@ public class AllBookActivity extends AppCompatActivity {
         catch (Exception e){
             e.printStackTrace();
         }
-        System.out.print(list2);
+        Button btn=(Button)findViewById(R.id.look);
+        Button car=(Button)findViewById(R.id.car);
+        car.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Handler myHandler = new Handler(){
+                    public void handleMessage(Message msg){
+                        String responseResult = (String)msg.obj;
+                        // 获取请求的json数据，并解析
+
+                        Bundle data=new Bundle();
+                        data.putString("json",responseResult);
+                        data.putString("username",username);
+                        Intent intent=new Intent(AllBookActivity.this,ShopCarActivity.class);
+                        intent.putExtras(data);
+                        startActivity(intent);
+                    }
+                };
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ShopCarToServer allBookToServer = new ShopCarToServer();
+                        try {
+                            String result = allBookToServer.doPost(username);
+                            Message msg = new Message();
+                            msg.obj = result;
+                            myHandler.sendMessage(msg);
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        });
         SimpleAdapter simpleAdapter=new SimpleAdapter(this,list2,R.layout.booklist,
                 new String[]{"name","image","description","price"},
                 new int[]{R.id.name,R.id.head,R.id.desc,R.id.price});
@@ -62,8 +99,10 @@ public class AllBookActivity extends AppCompatActivity {
                 final Handler myHandler = new Handler(){
                     public void handleMessage(Message msg){
                         String responseResult = (String)msg.obj;
+
                         Bundle data=new Bundle();
                         data.putString("json",responseResult);
+                        data.putString("username",username);
                         Intent intent=new Intent(AllBookActivity.this,BookActivity.class);
                         intent.putExtras(data);
                         startActivity(intent);
