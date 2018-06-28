@@ -44,7 +44,6 @@ public class AllBookToServer {
             InputStream inputStream = entity.getContent();
             BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
             String readLine = null;
-
             while((readLine = br.readLine()) != null){
                 result += readLine;
             }
